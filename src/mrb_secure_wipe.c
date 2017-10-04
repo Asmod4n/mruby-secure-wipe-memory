@@ -66,7 +66,7 @@ mrb_secure_wipe_memory_m(mrb_state *mrb, mrb_value secure_wipe_mod)
 void
 mrb_mruby_secure_wipe_memory_gem_init(mrb_state *mrb)
 {
-  mrb_define_module_function(mrb, mrb_define_module(mrb, "SecureWipeMemory"), "wipe", mrb_secure_wipe_memory_m, MRB_ARGS_ARG(1, 1));
+  mrb_define_module_function(mrb, mrb->kernel_module, "secure_wipe_memory", mrb_secure_wipe_memory_m, MRB_ARGS_ARG(1, 1));
 }
 
 void mrb_mruby_secure_wipe_memory_gem_final(mrb_state *mrb) {}
